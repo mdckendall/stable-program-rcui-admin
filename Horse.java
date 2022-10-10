@@ -1,0 +1,1 @@
+//Create the Horse class here.
