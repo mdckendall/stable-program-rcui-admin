@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "two inputs",
+      "setup": "javac Horse.java Main.java Stable.java",
+      "run": "java -classpath .:target/dependency/* Main",
+      "input": "123 faker street\r\ny\r\nJoJo\r\n1300\r\nfalse\r\ny\r\nSammy\r\n1200\r\ntrue\r\nn\r\n",
+      "output": "Horse #1 Name: JoJo Weight: 1300.0 Tame: false\r\nHorse #2 Name: Sammy Weight: 1200.0 Tame: true",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 50
+    },
+    {
+      "name": "one input",
+      "setup": "javac Horse.java Stable.java Main.java",
+      "run": "java -classpath .:target/dependency/* Main",
+      "input": "123 good street\r\ny\r\nOhBoy\r\n1000\r\ntrue\r\nn\r\n",
+      "output": "Horse #1 Name: OhBoy Weight: 1000.0 Tame: true",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 50
+    }
+  ]
+}
