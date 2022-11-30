@@ -20,14 +20,21 @@ class Main {
 				System.out.println("Enter true if the horse is tame or false if it is not.");
 				boolean t = scanner.nextBoolean();
 				h = new Horse(hn, w, t);
-				s.arrayList.add(h);
+				s.arraylist.add(h);
 			}//testing goodest 4
 			else{
 				break;
 			}
 		}while(true);
 		//Display the info here
-                //You code here!
+    
+    int count=1;
+    for(Horse arraylist: s.arraylist) {
+      System.out.print("Horse #"+ count);
+      System.out.print(" Name: " + arraylist.getName());
+      System.out.print(" Weight: " + arraylist.getWeight());
+      System.out.println(" Tame: " + arraylist.getTame());
+      count++;
 	  }
   }
 }
